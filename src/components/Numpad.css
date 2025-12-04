@@ -1,0 +1,171 @@
+.numpad-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.numpad-container {
+  background-color: #2c2c2c;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 90%;
+}
+
+.numpad-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.numpad-header h3 {
+  color: #f5deb3;
+  font-size: 1.8rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.numpad-close {
+  background: transparent;
+  border: none;
+  color: #ff4444;
+  font-size: 2.5rem;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+.numpad-close:hover {
+  background-color: rgba(255, 68, 68, 0.2);
+}
+
+.numpad-close:active {
+  transform: scale(0.9);
+}
+
+.numpad-display {
+  background-color: #1a1a1a;
+  border: 3px solid #4a4a4a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: right;
+  color: #4caf50;
+  margin-bottom: 1.5rem;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: 'Courier New', monospace;
+}
+
+.numpad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.numpad-key {
+  background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+  border: 2px solid #5a5a5a;
+  border-radius: 8px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  min-height: 80px;
+  cursor: pointer;
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+.numpad-key:hover {
+  background: linear-gradient(135deg, #5a5a5a 0%, #4a4a4a 100%);
+}
+
+.numpad-key:active {
+  transform: scale(0.95);
+  background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+}
+
+.numpad-clear {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  border-color: #cc4b4b;
+}
+
+.numpad-clear:hover {
+  background: linear-gradient(135deg, #ee5a52 0%, #dd4b48 100%);
+}
+
+.numpad-backspace {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  border-color: #e65100;
+}
+
+.numpad-backspace:hover {
+  background: linear-gradient(135deg, #f57c00 0%, #ef6c00 100%);
+}
+
+.numpad-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.numpad-cancel,
+.numpad-confirm {
+  min-height: 70px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  touch-action: manipulation;
+}
+
+.numpad-cancel {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  color: white;
+  border: 3px solid #495057;
+}
+
+.numpad-cancel:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #495057 100%);
+}
+
+.numpad-cancel:active {
+  transform: scale(0.95);
+}
+
+.numpad-confirm {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  border: 3px solid #2e7d32;
+}
+
+.numpad-confirm:hover {
+  background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+}
+
+.numpad-confirm:active {
+  transform: scale(0.95);
+}

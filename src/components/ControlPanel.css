@@ -1,0 +1,67 @@
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  height: 100%;
+  justify-content: center;
+}
+
+.control-button {
+  min-height: 90px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  touch-action: manipulation;
+}
+
+.button-icon {
+  font-size: 2rem;
+}
+
+.control-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-button-start {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  border: 4px solid #2e7d32;
+}
+
+.control-button-start:hover:not(:disabled) {
+  background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+}
+
+.control-button-pause {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  border: 4px solid #0d47a1;
+}
+
+.control-button-pause:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+}
+
+.control-button-restart {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  border: 4px solid #e65100;
+}
+
+.control-button-restart:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f57c00 0%, #ef6c00 100%);
+}
