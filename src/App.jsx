@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import ProductSelector from './components/ProductSelector'
 import ControlPanel from './components/ControlPanel'
 import DetectedBags from './components/DetectedBags'
@@ -52,46 +54,63 @@ function App() {
     handleRestart()
   }
 
+  const handleBack = () => {
+    if (confirm('¿Desea regresar al menú principal?')) {
+      // Aquí puedes agregar la lógica de navegación
+      alert('Regresando al menú principal...')
+    }
+  }
+
   // Calcular datos de carga
   const totalBags = products.reduce((sum, p) => sum + p.quantity, 0)
   const estimatedTime = Math.floor(totalBags * 1.5) // ejemplo: 1.5 min por bolsa
 
   return (
     <div className="hmi-container">
-      <div className="hmi-grid">
-        {/* Panel superior izquierdo: Productos */}
-        <div className="panel panel-products">
-          <ProductSelector
-            products={products}
-            onQuantityClick={handleQuantityClick}
-          />
-        </div>
+      <Header onBack={handleBack} />
 
-        {/* Panel superior derecho: Controles */}
-        <div className="panel panel-controls">
-          <ControlPanel
-            status={processStatus}
-            onStart={handleStart}
-            onPause={handlePause}
-            onRestart={handleRestart}
-          />
-        </div>
+      <div className="hmi-content">
+        <div className="hmi-grid">
+          {/* Panel superior izquierdo: Productos */}
+          <div className="panel panel-products">
+            <ProductSelector
+              products={products}
+              onQuantityClick={handleQuantityClick}
+            />
+          </div>
 
-        {/* Panel inferior izquierdo: Bolsas detectadas */}
-        <div className="panel panel-detected">
-          <DetectedBags count={detectedBags} />
-        </div>
+          {/* Panel superior derecho: Controles */}
+          <div className="panel panel-controls">
+            <ControlPanel
+              status={processStatus}
+              onStart={handleStart}
+              onPause={handlePause}
+              onRestart={handleRestart}
+            />
+          </div>
 
-        {/* Panel inferior derecho: Datos de carga */}
-        <div className="panel panel-load-data">
-          <LoadData
-            products={products}
-            totalBags={totalBags}
-            estimatedTime={estimatedTime}
-            onFinalize={handleFinalize}
-          />
+          {/* Panel inferior izquierdo: Bolsas detectadas */}
+          <div className="panel panel-detected">
+            <DetectedBags count={detectedBags} />
+          </div>
+
+          {/* Panel inferior derecho: Datos de carga */}
+          <div className="panel panel-load-data">
+            <LoadData
+              products={products}
+              totalBags={totalBags}
+              estimatedTime={estimatedTime}
+              onFinalize={handleFinalize}
+            />
+          </div>
         </div>
       </div>
+
+      <Footer
+        status={processStatus}
+        processType="HARINADO"
+        user="OPERADOR"
+      />
 
       {/* Numpad popup */}
       {showNumpad && (
