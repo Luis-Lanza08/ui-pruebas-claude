@@ -5,63 +5,79 @@
   padding: 1rem;
   height: 100%;
   justify-content: center;
+  background-color: #ffffff;
+  border-radius: 4px;
 }
 
 .control-button {
-  min-height: 70px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
+  min-height: 60px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1px solid;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.1s;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  color: white;
+  gap: 0.6rem;
   text-transform: uppercase;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   touch-action: manipulation;
+  letter-spacing: 1px;
+  font-family: 'Arial', sans-serif;
 }
 
 .button-icon {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .control-button:active {
-  transform: scale(0.95);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(1px);
 }
 
 .control-button:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
 .control-button-start {
-  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-  border: 3px solid #2e7d32;
+  background: #27ae60;
+  border-color: #229954;
+  color: white;
 }
 
 .control-button-start:hover:not(:disabled) {
-  background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+  background: #2ecc71;
+}
+
+.control-button-start:active:not(:disabled) {
+  background: #229954;
 }
 
 .control-button-pause {
-  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
-  border: 3px solid #0d47a1;
+  background: #3498db;
+  border-color: #2980b9;
+  color: white;
 }
 
 .control-button-pause:hover:not(:disabled) {
-  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  background: #5dade2;
+}
+
+.control-button-pause:active:not(:disabled) {
+  background: #2980b9;
 }
 
 .control-button-restart {
-  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
-  border: 3px solid #e65100;
+  background: #e67e22;
+  border-color: #d35400;
+  color: white;
 }
 
 .control-button-restart:hover:not(:disabled) {
-  background: linear-gradient(135deg, #f57c00 0%, #ef6c00 100%);
+  background: #f39c12;
+}
+
+.control-button-restart:active:not(:disabled) {
+  background: #d35400;
 }

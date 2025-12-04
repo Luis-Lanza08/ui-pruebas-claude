@@ -1,12 +1,12 @@
 .hmi-header {
-  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  background: #2c3e50;
   padding: 0.8rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  height: 60px;
-  min-height: 60px;
+  border-bottom: 1px solid #1a252f;
+  height: 55px;
+  min-height: 55px;
 }
 
 .header-brand {
@@ -16,59 +16,62 @@
 }
 
 .header-logo {
-  width: 45px;
-  height: 45px;
-  background: #d32f2f;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #e74c3c;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #c0392b;
 }
 
 .logo-text {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 700;
   color: white;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-family: 'Arial', sans-serif;
 }
 
 .header-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ecf0f1;
   margin: 0;
   white-space: nowrap;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .header-back-button {
-  background: #8b5a00;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.5rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
+  background: #34495e;
+  color: #ecf0f1;
+  border: 1px solid #2c3e50;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  font-weight: 400;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background 0.2s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background 0.15s;
   white-space: nowrap;
+  font-family: 'Arial', sans-serif;
 }
 
 .header-back-button:hover {
-  background: #6d4700;
+  background: #3d566e;
 }
 
 .header-back-button:active {
-  transform: scale(0.98);
+  background: #2c3e50;
 }
 
 .back-icon {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
